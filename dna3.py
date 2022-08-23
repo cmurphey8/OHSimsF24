@@ -1,8 +1,3 @@
-# https://towardsdatascience.com/append-in-python-41c37453400
-# Tried to figure how to add onto a list that I didn't know the length of to start
-
-## This isn't working, I'm not particularly sure why. It has to do with the indexing but idk what exactly.
-
 import csv
 import sys
 
