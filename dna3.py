@@ -1,6 +1,8 @@
+# PROMPT:   DICTIONARIES AREN'T FOR ME, SO I DIDN'T USE THEM...  
+#           MY SOLUTION HAS GOT TO BE NEARLY THERE, BUT I'M NOT GETTING ANY MATCHES!
+
 import csv
 import sys
-
 
 def main():
 
