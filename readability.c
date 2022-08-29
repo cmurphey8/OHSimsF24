@@ -1,6 +1,6 @@
 // PROMPT: I'm passing all but one of my check50 tests. How is this even possible??!?!
 
-// FAILED TEST:
+// FAILED TEST: expected Grade 7, but got Grade 8
 // In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
 
 #include <cs50.h>
