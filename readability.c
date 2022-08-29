@@ -13,6 +13,7 @@ int count_words(string text);
 int sentences=0;
 int words=1;
 int letters=0;
+int ch;
 
 int main(void)
 {
@@ -63,7 +64,7 @@ int count_letters(string text)
 {
     for(int i = 0; i < strlen(text); i++)
     {
-        int ch = text[i];
+        ch = text[i];
         if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122))
         {
             letters++;
@@ -76,7 +77,7 @@ int count_sentences(string text)
 {
     for(int i = 0; i < strlen(text); i++)
     {
-        int ch = text[i];
+        ch = text[i];
         if (ch == 33 || ch == 46 || ch == 63)
         {
             sentences++;
