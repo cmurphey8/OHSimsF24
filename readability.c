@@ -1,3 +1,5 @@
+// PROMPT: I'm passing all but one of my check50 tests. How is this even possible??!?!
+
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
@@ -9,16 +11,20 @@ int count_letters(string text);
 int count_sentences(string text);
 int count_words(string text);
 
-// init counts && helper var
+// init counts
 int sentences=0;
 int words=1;
 int letters=0;
-int ch;
+
+// init vars
+int i, ch;
+float L, S, index;
+string text;
 
 int main(void)
 {
     // prompt user for input string
-    string text = get_string("Text: ");
+    text = get_string("Text: ");
 
     // get counts
     count_letters(text);
@@ -26,10 +32,10 @@ int main(void)
     count_words(text);
 
     // compute index
-    float L = letters * 100 / words;
-    float S = sentences * 100 / words;
+    L = letters * 100 / words;
+    S = sentences * 100 / words;
 
-    float index = round( 0.0588 * L - 0.296 * S - 15.8);
+    index = round( 0.0588 * L - 0.296 * S - 15.8);
 
     // compare index
     if(index < 1)
@@ -48,11 +54,11 @@ int main(void)
     }
 }
 
-int count_words(string text)
+int count_words(string tmp)
 {
-    for(int i = 0; i < strlen(text); i++)
+    for(i = 0; i < strlen(tmp); i++)
     {
-        if(isspace(text[i]))
+        if(isspace(tmp[i]))
         {
             words++;
         }
@@ -60,11 +66,11 @@ int count_words(string text)
     return words;
 }
 
-int count_letters(string text)
+int count_letters(string tmp)
 {
-    for(int i = 0; i < strlen(text); i++)
+    for(i = 0; i < strlen(tmp); i++)
     {
-        ch = text[i];
+        ch = tmp[i];
         if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122))
         {
             letters++;
@@ -73,11 +79,11 @@ int count_letters(string text)
     return letters;
 }
 
-int count_sentences(string text)
+int count_sentences(string tmp)
 {
-    for(int i = 0; i < strlen(text); i++)
+    for(i = 0; i < strlen(tmp); i++)
     {
-        ch = text[i];
+        ch = tmp[i];
         if (ch == 33 || ch == 46 || ch == 63)
         {
             sentences++;
