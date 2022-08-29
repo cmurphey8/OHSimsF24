@@ -4,11 +4,12 @@
 #include <ctype.h>
 #include <math.h>
 
+// function prototypes
 int count_letters(string text);
 int count_sentences(string text);
 int count_words(string text);
 
-// counts
+// init counts
 int sentences=0;
 int words=1;
 int letters=0;
