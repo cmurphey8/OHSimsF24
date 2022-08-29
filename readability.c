@@ -1,5 +1,8 @@
 // PROMPT: I'm passing all but one of my check50 tests. How is this even possible??!?!
 
+// FAILED TEST:
+// In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
